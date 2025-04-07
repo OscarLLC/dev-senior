@@ -14,9 +14,8 @@ let productos = [
   { nombre: "frutiño", precio: 1000 },
 ];
 let encontrado = null;
-let descuento = "";
 let precioFinal = "";
-if (categoria === "Normal") {
+if (categoria.toLowerCase() === "Normal" || "normal") {
   //   console.log(categoria);
   for (let i = 0; i < productos.length; i++) {
     // console.log(productos[i].nombre, productos[i].precio);
@@ -25,27 +24,83 @@ if (categoria === "Normal") {
       descuento = 20;
       let precioPre = (productos[i].precio * descuento) / 100;
       precioFinal = productos[i].precio - precioPre;
-      console.log(precioFinal);
+      //   console.log(precioFinal);
       break;
     }
   }
-} else if (categoria === "Estudiante") {
+} else if (categoria === "Estudiante" || "Estudiante") {
   //   console.log(categoria);
   for (let i = 0; i < productos.length; i++) {
     // console.log(productos[i].nombre, productos[i].precio);
     if (productos[i].nombre.toLowerCase() === proIngresado.toLowerCase()) {
       encontrado = productos[i];
-      descuento = 30;
-      let precioPre = (productos[i].precio * descuento) / 100;
+      descuentoEs = 30;
+      let precioPre = (productos[i].precio * descuentoEs) / 100;
       precioFinal = productos[i].precio - precioPre;
       console.log(precioFinal);
+      break;
+    }
+  }
+} else if (categoria === "Vip" || "vip") {
+  //   console.log(categoria);
+  for (let i = 0; i < productos.length; i++) {
+    // console.log(productos[i].nombre, productos[i].precio);
+    if (productos[i].nombre.toLowerCase() === proIngresado.toLowerCase()) {
+      encontrado = productos[i];
+      descuento = 40;
+      precioPre = (productos[i].precio * descuento) / 100;
+      precioFinal = productos[i].precio - precioPre;
+      //   console.log(precioFinal);
+      break;
+    }
+  }
+} else if (categoria === "Premium" || "premium") {
+  //   console.log(categoria);
+  for (let i = 0; i < productos.length; i++) {
+    // console.log(productos[i].nombre, productos[i].precio);
+    if (productos[i].nombre.toLowerCase() === proIngresado.toLowerCase()) {
+      encontrado = productos[i];
+      descuento = 50;
+      let precioPre = (productos[i].precio * descuento) / 100;
+      precioFinal = productos[i].precio - precioPre;
+      //   console.log(precioFinal);
+      break;
+    }
+  }
+} else if (categoria === "Empleado" || "empleado") {
+  //   console.log(categoria);
+  for (let i = 0; i < productos.length; i++) {
+    // console.log(productos[i].nombre, productos[i].precio);
+    if (productos[i].nombre.toLowerCase() === proIngresado.toLowerCase()) {
+      encontrado = productos[i];
+      descuento = 60;
+      let precioPre = (productos[i].precio * descuento) / 100;
+      precioFinal = productos[i].precio - precioPre;
+      //   console.log(precioFinal);
+      break;
+    }
+  }
+} else if (categoria === "Mayorista" || "mayorista") {
+  //   console.log(categoria);
+  for (let i = 0; i < productos.length; i++) {
+    // console.log(productos[i].nombre, productos[i].precio);
+    if (productos[i].nombre.toLowerCase() === proIngresado.toLowerCase()) {
+      encontrado = productos[i];
+      descuento = 70;
+      let precioPre = (productos[i].precio * descuento) / 100;
+      precioFinal = productos[i].precio - precioPre;
+      //   console.log(precioFinal);
       break;
     }
   }
 }
 if (encontrado) {
   console.log(
-    `El producto ${encontrado.nombre} tiene un valor de ${encontrado.precio} pero hoy tiene un descuento del 20% quedando ${precioFinal}`
+    `La categoria ${categoria} con producto ${
+      encontrado.nombre
+    } tiene un valor de ${encontrado.precio} pero hoy tiene un descuento del ${
+      descuento || descuentoEs
+    }  % quedando ${precioFinal}`
   );
 } else {
   console.log("no exise");
