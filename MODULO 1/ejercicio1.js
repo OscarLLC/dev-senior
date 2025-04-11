@@ -13,7 +13,7 @@ if (categoria === "Normal") {
   console.log(
     "El valor final que pagaría el usuario categoria " +
       categoria +
-      "es de: " +
+      " es de: " +
       precioDescuento
   );
 } else if (categoria === "Estudiante") {
@@ -22,7 +22,7 @@ if (categoria === "Normal") {
   console.log(
     "El valor final que pagaría el usuario categoria " +
       categoria +
-      "es de: " +
+      " es de: " +
       precioDescuento
   );
 } else if (categoria === "VIP") {
@@ -31,7 +31,7 @@ if (categoria === "Normal") {
   console.log(
     "El valor final que pagaría el usuario categoria " +
       categoria +
-      "es de: " +
+      " es de: " +
       precioDescuento
   );
 } else if (categoria === "Premium") {
@@ -40,7 +40,7 @@ if (categoria === "Normal") {
   console.log(
     "El valor final que pagaría el usuario categoria " +
       categoria +
-      "es de: " +
+      " es de: " +
       precioDescuento
   );
 }

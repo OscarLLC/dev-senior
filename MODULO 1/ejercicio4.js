@@ -10,5 +10,7 @@ if (xpIngresa >= xpRequerida) {
     "habilidad mejorada del " + personaje + " con XP:" + habilidadMejorada
   );
 } else {
-  console.log("no puedes mejorar tu habilidad");
+  console.log(
+    "no puedes mejorar tu habilidad tiene que ser mayor a " + xpRequerida
+  );
 }
